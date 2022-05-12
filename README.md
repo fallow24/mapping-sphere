@@ -68,6 +68,8 @@ Second Note: There still exists a bug where the camera will not connect properly
 Be aware of any error messages and watch the ROS topic output before recording data.
 If that happens, shutdown the ROS node, reconnect the USB of the camera, then restart the ROS node.
 
+Third Note: The code for the reconnection fix is located in ~/catkin_ws/src/realsense_pipeline_fix/
+
 # Record data
 
 ```
