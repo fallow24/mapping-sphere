@@ -30,7 +30,10 @@ Further constraints are present in the algorithm to account for slippage and sli
 To start the filter (it is called imuJasper), connect all three IMUs to the PI.
 The serial numbers (they are written at the bottom of the IMU) must be specified in ~/catkin_ws/src/imuJasper/src/imuJasper.h .
 Then, start the ROS node:
+
+```
  $ rosrun imuJasper imuJasper -q -rate 125 -imuRate 250 -autogain 0.2 -z0
+```
 
 Alternativley, you may use ~/launchJasper.sh to launch the laserscanner alongside with the 3 IMUs and the filter.
 
@@ -46,7 +49,10 @@ So, as the official ROS drivers / launch files wont work, we had to come up with
 It seemed that, due to a bug, the camera would loose connection and dont publish pose data after a short amount of time.
 To the best of our luck, there exists "librealsense", a more low-level interface for the camera, which made the fix quite easy.
 Start the T265 by connecting it to the PI and then run: 
+
+```
  $ rosrun realsense_pipeline_fix auto_reconnect
+```
 
 Alternativley, you may use ~/launchIntel.sh to launch the laserscanner alongside with the T265.
 
@@ -58,7 +64,9 @@ If that happens, shutdown the ROS node, reconnect the USB of the camera, then re
 
 # Record data
 
+```
  $ rosbag record --all --output-name=MyRecording 
+```
 
 Records all the topics and writes MyRecording.bag
 
@@ -66,7 +74,9 @@ Records all the topics and writes MyRecording.bag
 
 On your Processing Machine, do the following:
 
+```
  $ scp ubuntu@10.42.0.1:/path/to/bag/MyRecording.bag /target/path/on/your/PC/ 
+```
 
 which will copy the bagfile from the PI and save it as /target/path/on/your/PC/MyRecording.bag .
 
