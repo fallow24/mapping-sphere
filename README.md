@@ -6,6 +6,11 @@ There are multiple ROS launch files that are located inside ~/catkin_ws/launch/ 
  - statictf...launch: Launches a ROS node that publishes the external LIDAR-inertial calibration on tf/ topic. 
  - Note: The Intel T265 tracking camera is started a little differently. See chapters below. 
 
+Example usage:
+```
+ $ roslaunch ~/catkin_ws/launch/lidar.launch
+```
+
 ## LiDAR
 
 The LIVOX Mid-100 laserscanner device fortunatley has a ROS driver.
