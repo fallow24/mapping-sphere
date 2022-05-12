@@ -16,7 +16,8 @@ Example usage:
 The LIVOX Mid-100 laserscanner device fortunatley has a ROS driver.
 Its location is ~/ws_livox/, however you wont need to go there ever.
 Just use the launch file as specified above.
-Note that there are some scripts located in ~, each launches the laserscanner alongside with an inertial tracking method.
+Note that there are some scripts located in the home directory, i.e., ~/launchSimple.sh, ~/launchJasper.sh, and ~/launchIntel.sh. 
+Each launches the laserscanner alongside with an inertial tracking method.
 For example, ~/launchSimple.sh launches both the laserscanner, as well as a single IMU for inertial reference.
 
 ## Single IMU
